@@ -22,12 +22,14 @@ public class Cell implements Fillable {
     protected State mState;
     protected int mLayout;
     protected int mImg;
+    protected int mHighlight;
 
     public Cell(int id, int layout) {
 	mId = id;
 	mLayout = layout;
 	mState = State.EMPTY;
 	mImg = 0;
+	mHighlight = -1;
     }
 
     public State getState() {
@@ -48,6 +50,10 @@ public class Cell implements Fillable {
 
     public int getLayout() {
 	return mLayout;
+    }
+    
+    public void highlight(int color) {
+	mHighlight = color;
     }
 
     @Override
@@ -73,6 +79,10 @@ public class Cell implements Fillable {
 	    handler.img.setImageResource(mImg);
 	} else {
 	    handler.img.setImageResource(R.drawable.alpha_transparent);
+	}
+	
+	if (mHighlight >= 0) {
+	    handler.img.setBackgroundResource(mHighlight);
 	}
     }
 }

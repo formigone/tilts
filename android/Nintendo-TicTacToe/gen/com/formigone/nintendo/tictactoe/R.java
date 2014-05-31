@@ -11,7 +11,10 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
+        public static final int blue_dark=0x7f040002;
+        public static final int blue_light=0x7f040001;
         public static final int gray_light=0x7f040000;
+        public static final int red_dark=0x7f040003;
     }
     public static final class dimen {
         public static final int cell_height=0x7f050000;

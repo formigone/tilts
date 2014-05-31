@@ -1,5 +1,8 @@
 <resources>
 
     <color name="gray_light">#555555</color>
+    <color name="blue_light">#ff33b5e5</color>
+    <color name="blue_dark">#0000cc</color>
+    <color name="red_dark">#cc0000</color>
 
 </resources>
