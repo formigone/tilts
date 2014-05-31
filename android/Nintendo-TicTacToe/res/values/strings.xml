@@ -15,5 +15,6 @@
     <string name="player_gcn">Gamecube</string>
     <string name="player_ds">DS</string>
     <string name="player_wii">Wii</string>
+    <string name="copyright">http://www.rodrigo-silveira.com</string>
 
 </resources>
