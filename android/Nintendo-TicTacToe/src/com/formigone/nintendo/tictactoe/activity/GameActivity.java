@@ -23,7 +23,7 @@ public class GameActivity extends Activity {
 
     private Player[] mPlayers;
     private int mTurn;
-    
+
     private GridView mBoard;
     private List<Cell> mCells;
     private BoardAdapter mCellAdapter;
@@ -56,7 +56,7 @@ public class GameActivity extends Activity {
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 		long id) {
-	    
+
 	    Cell cell = mCells.get(position);
 	    if (cell.getState() == State.EMPTY) {
 		cell.setState(mTurn == 0 ? State.PLAYER_ONE : State.PLAYER_TWO);

@@ -8,7 +8,11 @@
         android:id="@+id/board_grid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:numColumns="3" >
+        android:background="@color/gray_light"
+        android:horizontalSpacing="@dimen/cell_spacing"
+        android:numColumns="3"
+        android:verticalSpacing="@dimen/cell_spacing" >
+
     </GridView>
 
 </LinearLayout>
