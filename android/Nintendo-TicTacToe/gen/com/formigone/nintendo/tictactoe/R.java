@@ -14,7 +14,14 @@ public final class R {
         public static final int cell_height=0x7f040000;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int alpha_transparent=0x7f020000;
+        public static final int controller_gba=0x7f020001;
+        public static final int controller_gcn=0x7f020002;
+        public static final int controller_n64=0x7f020003;
+        public static final int controller_nes=0x7f020004;
+        public static final int controller_snes=0x7f020005;
+        public static final int controller_wii=0x7f020006;
+        public static final int ic_launcher=0x7f020007;
     }
     public static final class id {
         public static final int board_grid=0x7f070001;
@@ -29,10 +36,15 @@ public final class R {
     }
     public static final class string {
         public static final int app_name=0x7f050000;
-        public static final int player_gameboy=0x7f050004;
+        public static final int player_gb=0x7f050004;
+        public static final int player_gba=0x7f050005;
+        public static final int player_gcn=0x7f050007;
+        public static final int player_n64=0x7f050008;
         /**  Player Names 
          */
         public static final int player_nes=0x7f050003;
+        public static final int player_snes=0x7f050006;
+        public static final int player_wii=0x7f050009;
         public static final int splash_sub_title=0x7f050002;
         public static final int splash_title=0x7f050001;
     }

@@ -14,6 +14,7 @@ import android.widget.GridView;
 import com.formigone.nintendo.tictactoe.R;
 import com.formigone.nintendo.tictactoe.adapter.BoardAdapter;
 import com.formigone.nintendo.tictactoe.model.Cell;
+import com.formigone.nintendo.tictactoe.model.Cell.State;
 import com.formigone.nintendo.tictactoe.model.Player;
 
 public class GameActivity extends Activity {
@@ -35,8 +36,8 @@ public class GameActivity extends Activity {
 	mTurn = 0;
 	mCells = new ArrayList<Cell>();
 
-	mPlayers[0] = new Player(R.string.player_nes, R.drawable.ic_launcher);
-	mPlayers[0] = new Player(R.string.player_gameboy, R.drawable.ic_launcher);
+	mPlayers[0] = new Player(R.string.player_nes, R.drawable.controller_nes);
+	mPlayers[1] = new Player(R.string.player_wii, R.drawable.controller_wii);
 
 	setContentView(R.layout.game_board);
 	mBoard = (GridView) findViewById(R.id.board_grid);
@@ -55,8 +56,14 @@ public class GameActivity extends Activity {
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 		long id) {
+	    
 	    Cell cell = mCells.get(position);
-	    Log.i(TAG, "Cell id " + cell.getId());
+	    if (cell.getState() == State.EMPTY) {
+		cell.setState(mTurn == 0 ? State.PLAYER_ONE : State.PLAYER_TWO);
+		cell.setImg(mPlayers[mTurn].getmImage());
+		mTurn = (mTurn + 1) % 2;
+		mCellAdapter.notifyDataSetChanged();
+	    }
 	}
     };
 }

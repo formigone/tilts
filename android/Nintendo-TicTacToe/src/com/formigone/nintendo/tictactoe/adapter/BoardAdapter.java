@@ -2,6 +2,7 @@ package com.formigone.nintendo.tictactoe.adapter;
 
 import java.util.List;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,8 @@ import android.widget.BaseAdapter;
 import com.formigone.nintendo.tictactoe.model.Cell;
 
 public class BoardAdapter extends BaseAdapter {
+    private static final String TAG = "BoardAdapter";
+    
     protected List<Cell> mCells;
 
     public BoardAdapter(List<Cell> mCells) {
@@ -35,7 +38,7 @@ public class BoardAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 	Cell cell = (Cell) getItem(position);
-
+Log.i(TAG, "Drawing position " + position);
 	if (convertView == null) {
 	    LayoutInflater inflater = LayoutInflater.from(parent.getContext());
 	    convertView = inflater.inflate(cell.getLayout(), null);

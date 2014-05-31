@@ -6,6 +6,11 @@
     
     <!-- Player Names -->
     <string name="player_nes">NES</string>
-    <string name="player_gameboy">Gameboy</string>
+    <string name="player_gb">Gameboy</string>
+    <string name="player_gba">Gameboy Advance</string>
+    <string name="player_snes">SNES</string>
+    <string name="player_gcn">Gamecube</string>
+    <string name="player_n64">Nintendo 64</string>
+    <string name="player_wii">Wii</string>
 
 </resources>
