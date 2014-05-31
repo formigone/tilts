@@ -3,5 +3,9 @@
     <string name="app_name">Nintendo Tic-Tac-Toe</string>
     <string name="splash_title">RODRIGO SILVEIRA</string>
     <string name="splash_sub_title">Software</string>
+    
+    <!-- Player Names -->
+    <string name="player_nes">NES</string>
+    <string name="player_gameboy">Gameboy</string>
 
 </resources>

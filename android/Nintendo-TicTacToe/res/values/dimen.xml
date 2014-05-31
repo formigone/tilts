@@ -1,0 +1,5 @@
+<resources>
+
+    <dimen name="cell_height">75dp</dimen>
+
+</resources>
