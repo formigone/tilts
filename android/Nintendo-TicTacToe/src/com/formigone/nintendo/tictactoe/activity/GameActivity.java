@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
-import java.util.Set;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -64,6 +66,24 @@ public class GameActivity extends Activity {
 	mCellAdapter = new BoardAdapter(mCells);
 	mBoard.setAdapter(mCellAdapter);
 	mBoard.setOnItemClickListener(mOnCellClick);
+    }
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.play_again, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.replay:
+        	recreate();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
     
     private int getWinningPosition(State state) {

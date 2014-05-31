@@ -54,17 +54,21 @@ public final class R {
         public static final int ic_launcher=0x7f02000b;
     }
     public static final class id {
-        public static final int board_grid=0x7f080001;
-        public static final int container=0x7f080002;
-        public static final int copyright=0x7f080005;
-        public static final int img=0x7f080000;
-        public static final int sub_title=0x7f080004;
-        public static final int title=0x7f080003;
+        public static final int board_grid=0x7f090001;
+        public static final int container=0x7f090002;
+        public static final int copyright=0x7f090005;
+        public static final int img=0x7f090000;
+        public static final int replay=0x7f090006;
+        public static final int sub_title=0x7f090004;
+        public static final int title=0x7f090003;
     }
     public static final class layout {
         public static final int board_cell=0x7f030000;
         public static final int game_board=0x7f030001;
         public static final int splash_screen=0x7f030002;
+    }
+    public static final class menu {
+        public static final int play_again=0x7f080000;
     }
     public static final class string {
         public static final int app_name=0x7f060000;
@@ -81,6 +85,7 @@ public final class R {
         public static final int player_nes=0x7f060004;
         public static final int player_snes=0x7f060008;
         public static final int player_wii=0x7f06000c;
+        public static final int replay=0x7f06000e;
         public static final int splash_sub_title=0x7f060002;
         public static final int splash_title=0x7f060001;
     }

@@ -16,5 +16,6 @@
     <string name="player_ds">DS</string>
     <string name="player_wii">Wii</string>
     <string name="copyright">http://www.rodrigo-silveira.com</string>
+    <string name="replay">New Game</string>
 
 </resources>
