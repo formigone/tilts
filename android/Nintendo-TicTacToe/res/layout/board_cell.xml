@@ -3,7 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@android:color/white"
-    android:orientation="vertical" >
+    android:fadingEdge="none"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    android:showDividers="none" >
 
     <ImageView
         android:id="@+id/img"

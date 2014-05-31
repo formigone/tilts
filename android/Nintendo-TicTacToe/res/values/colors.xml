@@ -1,8 +1,34 @@
 <resources>
 
+    <color name="green_light">#1abc9c</color>
     <color name="gray_light">#555555</color>
-    <color name="blue_light">#ff33b5e5</color>
-    <color name="blue_dark">#0000cc</color>
-    <color name="red_dark">#cc0000</color>
+
+    <!-- System colors + accents -->
+    <color name="wii_default">#ff33b5e5</color>
+    <color name="wii_accent">#b6d5e3</color>
+
+    <color name="nes_default">#f70000</color>
+    <color name="nes_accent">#bf6060</color>
+
+    <color name="famicom_default">#8d0000</color>
+    <color name="famicom_accent">#ffa71a</color>
+
+    <color name="snes_default">#58ca2a</color>
+    <color name="snes_accent">#81b884</color>
+
+    <color name="ds_default">#ebebeb</color>
+    <color name="ds_accent">#191919</color>
+
+    <color name="gba_default">#135078</color>
+    <color name="gba_accent">#009ec4</color>
+
+    <color name="gbm_default">#f1691c</color>
+    <color name="gbm_accent">#fbe96d</color>
+
+    <color name="gcn_default">#44296b</color>
+    <color name="gcn_accent">#85769d</color>
+
+    <color name="n64_default">#ffe400</color>
+    <color name="n64_accent">#e0ba0e</color>
 
 </resources>

@@ -1,16 +1,18 @@
 package com.formigone.nintendo.tictactoe.activity;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
+import java.util.Set;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import com.formigone.nintendo.tictactoe.Constants;
 import com.formigone.nintendo.tictactoe.R;
@@ -30,7 +32,7 @@ public class GameActivity extends Activity {
     private GridView mBoard;
     private List<Cell> mCells;
     private BoardAdapter mCellAdapter;
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
@@ -39,9 +41,18 @@ public class GameActivity extends Activity {
 	mTurn = 0;
 	mIsGameover = false;
 	mCells = new ArrayList<Cell>();
+	
+	HashMap<Integer, int[]> systems = Constants.getSystems();
+	Random rand = new Random();
+	Object[] values = systems.values().toArray();
+	
+	int[] row = (int[])values[rand.nextInt(values.length)];
+	mPlayers[0] = new Player(row[0], row[1], row[2], row[3]);
 
-	mPlayers[0] = new Player(R.string.player_nes, R.drawable.controller_nes);
-	mPlayers[1] = new Player(R.string.player_wii, R.drawable.controller_wii);
+	do {
+	    row = (int[])values[rand.nextInt(values.length)];
+	    mPlayers[1] = new Player(row[0], row[1], row[2], row[3]);
+	} while (mPlayers[0].getName() == mPlayers[1].getName());
 
 	setContentView(R.layout.game_board);
 	mBoard = (GridView) findViewById(R.id.board_grid);
@@ -117,7 +128,7 @@ public class GameActivity extends Activity {
 
 	    if (cell.getState() == State.EMPTY) {
 		cell.setState(turn);
-		cell.setImg(mPlayers[mTurn].getmImage());
+		cell.setImg(mPlayers[mTurn].getImage());
 		mCellAdapter.notifyDataSetChanged();
 
 		int row = getWinningPosition(turn);
@@ -129,15 +140,15 @@ public class GameActivity extends Activity {
 		    pos.add(positions[row][0]);
 		    pos.add(positions[row][1]);
 		    pos.add(positions[row][2]);
-		    highlightPosition(pos, R.color.blue_light);
+		    highlightPosition(pos, mPlayers[mTurn].getColor());
 
-		    String msg = getString(mPlayers[mTurn].getmName()) + " wins!";
+		    String msg = getString(mPlayers[mTurn].getName()) + " wins!";
 		    Toast.makeText(GameActivity.this, msg, Toast.LENGTH_LONG).show();
 		} else if (isDraw()) {
 		    mIsGameover = true;
 		    String msg = "Draw!!";
-		    highlightPosition(getPositionFor(State.PLAYER_ONE), R.color.blue_dark);
-		    highlightPosition(getPositionFor(State.PLAYER_TWO), R.color.red_dark);
+		    highlightPosition(getPositionFor(State.PLAYER_ONE), mPlayers[0].getColorAccent());
+		    highlightPosition(getPositionFor(State.PLAYER_TWO), mPlayers[1].getColorAccent());
 		    Toast.makeText(GameActivity.this, msg, Toast.LENGTH_LONG).show();
 		} else {
 		    mTurn = (mTurn + 1) % 2;
