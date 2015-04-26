@@ -29,15 +29,77 @@
     var hero;
 
     function preload() {
-        game.load.image('megaman', 'img/megaman.gif');
+        game.load.atlasJSONHash('mm', 'img/megaman.gif', 'res/megaman.json');
     }
 
     function create() {
-        hero = game.add.sprite(WIDTH / 2, HEIGHT / 2, 'megaman');
+        hero = game.add.sprite(WIDTH / 2, HEIGHT / 2, 'mm');
         hero.anchor.set(0.5, 0.5);
+
+        hero.animations.add('standRight', [
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRight',
+            'standingRightBlink'
+        ], 16, true, false);
+
+        hero.animations.add('runningRight', [
+                'runningRight0',
+                'runningRight1',
+                'runningRight2',
+        ], 10, true, false);
+
+        hero.animations.add('jumpingRight', [
+                'jumpingRight'
+        ], 1, true, false);
     }
 
     function update() {
+        
     }
 </script>
 </body>
