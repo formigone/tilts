@@ -8,11 +8,7 @@
         "h": 24
       },
       "rotated": false,
-      "trimmed": false,
-      "sourceSize": {
-        "w": 21,
-        "h": 24
-      }
+      "trimmed": false
     },
     "standingRightBlink": {
       "frame": {
@@ -22,11 +18,7 @@
         "h": 24
       },
       "rotated": false,
-      "trimmed": false,
-      "sourceSize": {
-        "w": 21,
-        "h": 24
-      }
+      "trimmed": false
     },
     "runningRight0": {
       "frame": {
@@ -36,11 +28,7 @@
         "h": 24
       },
       "rotated": false,
-      "trimmed": false,
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      }
+      "trimmed": false
     },
     "runningRight1": {
       "frame": {
@@ -50,11 +38,7 @@
         "h": 24
       },
       "rotated": false,
-      "trimmed": false,
-      "sourceSize": {
-        "w": 16,
-        "h": 24
-      }
+      "trimmed": false
     },
     "runningRight2": {
       "frame": {
@@ -64,11 +48,7 @@
         "h": 24
       },
       "rotated": false,
-      "trimmed": false,
-      "sourceSize": {
-        "w": 21,
-        "h": 24
-      }
+      "trimmed": false
     },
     "jumpingRight": {
       "frame": {
@@ -78,11 +58,7 @@
         "h": 30
       },
       "rotated": false,
-      "trimmed": false,
-      "sourceSize": {
-        "w": 26,
-        "h": 30
-      }
+      "trimmed": false
     }
   }
 }
