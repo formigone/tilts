@@ -1,0 +1,38 @@
+{
+  "standingRight": {
+    "width": 21,
+    "height": 24,
+    "x": 77,
+    "y": 8
+  },
+  "standingRightBlink": {
+    "width": 21,
+    "height": 24,
+    "x": 107,
+    "y": 8
+  },
+  "runningRight0": {
+    "width": 24,
+    "height": 24,
+    "x": 162,
+    "y": 8
+  },
+  "runningRight1": {
+    "width": 16,
+    "height": 24,
+    "x": 192,
+    "y": 8
+  },
+  "runningRight2": {
+    "width": 21,
+    "height": 24,
+    "x": 213,
+    "y": 8
+  },
+  "jumpingRight": {
+    "width": 26,
+    "height": 30,
+    "x": 239,
+    "y": 2
+  }
+}
