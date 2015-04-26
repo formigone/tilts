@@ -1,38 +1,88 @@
 {
-  "standingRight": {
-    "width": 21,
-    "height": 24,
-    "x": 77,
-    "y": 8
-  },
-  "standingRightBlink": {
-    "width": 21,
-    "height": 24,
-    "x": 107,
-    "y": 8
-  },
-  "runningRight0": {
-    "width": 24,
-    "height": 24,
-    "x": 162,
-    "y": 8
-  },
-  "runningRight1": {
-    "width": 16,
-    "height": 24,
-    "x": 192,
-    "y": 8
-  },
-  "runningRight2": {
-    "width": 21,
-    "height": 24,
-    "x": 213,
-    "y": 8
-  },
-  "jumpingRight": {
-    "width": 26,
-    "height": 30,
-    "x": 239,
-    "y": 2
+  "frames": {
+    "standingRight": {
+      "frame": {
+        "x": 77,
+        "y": 8,
+        "w": 21,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 21,
+        "h": 24
+      }
+    },
+    "standingRightBlink": {
+      "frame": {
+        "x": 107,
+        "y": 8,
+        "w": 21,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 21,
+        "h": 24
+      }
+    },
+    "runningRight0": {
+      "frame": {
+        "x": 162,
+        "y": 8,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      }
+    },
+    "runningRight1": {
+      "frame": {
+        "x": 192,
+        "y": 8,
+        "w": 16,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 16,
+        "h": 24
+      }
+    },
+    "runningRight2": {
+      "frame": {
+        "x": 213,
+        "y": 8,
+        "w": 21,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 21,
+        "h": 24
+      }
+    },
+    "jumpingRight": {
+      "frame": {
+        "x": 239,
+        "y": 2,
+        "w": 26,
+        "h": 30
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 26,
+        "h": 30
+      }
+    }
   }
 }
