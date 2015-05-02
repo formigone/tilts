@@ -1,9 +1,8 @@
 {
   "name": "megaman",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "A Mega Man clone used to learn Phaser.js",
   "author": "Rodrigo Silveira",
-  "license": "BSD-2-Clause",
   "devDependencies": {
     "browserify-shim": "~3.8.6",
     "browserify": "~10.0.0",
