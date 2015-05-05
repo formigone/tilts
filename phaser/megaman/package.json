@@ -12,7 +12,8 @@
     "vinyl-source-stream": "~1.1.0",
     "stream-combiner2": "~1.0.2",
     "gulp-sourcemaps": "~1.5.2",
-    "gulp-util": "~3.0.4"
+    "gulp-util": "~3.0.4",
+    "yargs": "~3.8.0"
   },
   "browser": {
     "Phaser": "./bower_components/phaser/build/phaser.js"

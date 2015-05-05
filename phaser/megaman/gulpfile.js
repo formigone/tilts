@@ -5,10 +5,11 @@ var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var sourcemaps = require('gulp-sourcemaps');
 var gutil = require('gulp-util');
+var argv = require('yargs').argv;
 
 var FILES = {
-    game: './test.js',
-    out: 'game.js',
+    game: argv['in'] || './test.js',
+    out: argv['out'] || 'game.js',
     outDir: './dist/'
 };
 

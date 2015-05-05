@@ -1,2 +1,110 @@
-!function n(i,t,g){function a(s,h){if(!t[s]){if(!i[s]){var R="function"==typeof require&&require;if(!h&&R)return R(s,!0);if(d)return d(s,!0);var e=new Error("Cannot find module '"+s+"'");throw e.code="MODULE_NOT_FOUND",e}var r=t[s]={exports:{}};i[s][0].call(r.exports,function(n){var t=i[s][1][n];return a(t?t:n)},r,r.exports,n,i,t,g)}return t[s].exports}for(var d="function"==typeof require&&require,s=0;s<g.length;s++)a(g[s]);return a}({1:[function(n,i,t){(function(n){function i(){R.load.atlasJSONHash("mm","/img/megaman.gif","/res/megaman.json")}function t(){a=R.add.sprite(s/2,h/2,"mm"),a.anchor.set(.5,.5),a.animations.add(r.standingRight,["standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRight","standingRightBlink"],16,!0,!1),a.animations.add(r.runningRight,["runningRight0","runningRight1","runningRight2"],10,!0,!1),a.animations.add(r.jumpingRight,["jumpingRight"],1,!0,!1)}function g(){R.input.keyboard.isDown(d.Keyboard.RIGHT)?(a.animations.play(r.runningRight),e="right"):a.animations.play(r.standingRight),R.input.keyboard.isDown(d.Keyboard.SPACEBAR)&&a.animations.play(r.jumpingRight)}var a,d="undefined"!=typeof window?window.Phaser:"undefined"!=typeof n?n.Phaser:null,s=800,h=450,R=new d.Game(s,h,d.AUTO,null,{preload:i,create:t,update:g}),e="right",r={standingRight:"standingRight",runningRight:"runningRight",jumpingRight:"jumpingRight",standingLeft:"standingLeft",runningLeft:"runningLeft",jumpingLeft:"jumpingLeft"}}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{}]},{},[1]);
-//# sourceMappingURL=game.js.map
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+(function (global){
+var Phaser = (typeof window !== "undefined" ? window.Phaser : typeof global !== "undefined" ? global.Phaser : null);
+
+var WIDTH = 800;
+var HEIGHT = 450;
+
+var game = new Phaser.Game(WIDTH, HEIGHT, Phaser.AUTO, null, {preload: preload, create: create, update: update});
+
+var hero;
+var heroLastDir = 'right';
+var heroState = {
+    standingRight: 'standingRight',
+    runningRight: 'runningRight',
+    jumpingRight: 'jumpingRight',
+
+    standingLeft: 'standingLeft',
+    runningLeft: 'runningLeft',
+    jumpingLeft: 'jumpingLeft'
+};
+
+function preload() {
+    game.load.atlasJSONHash('mm', '/img/megaman.gif', '/res/megaman.json');
+}
+
+function create() {
+    hero = game.add.sprite(WIDTH / 2, HEIGHT / 2, 'mm');
+    hero.anchor.set(0.5, 0.5);
+
+    hero.animations.add(heroState.standingRight, [
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRight',
+        'standingRightBlink'
+    ], 16, true, false);
+
+    hero.animations.add(heroState.runningRight, [
+        'runningRight0',
+        'runningRight1',
+        'runningRight2',
+    ], 10, true, false);
+
+    hero.animations.add(heroState.jumpingRight, [
+        'jumpingRight'
+    ], 1, true, false);
+}
+
+function update() {
+    if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
+        hero.animations.play(heroState.runningRight);
+        heroLastDir = 'right';
+//        } else if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
+//            hero.animations.play(heroState.runningLeft);
+//            heroLastDir = 'left';
+    } else {
+        hero.animations.play(heroState.standingRight
+        );
+    }
+
+    if (game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)) {
+        hero.animations.play(heroState.jumpingRight);
+    }
+}
+
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{}]},{},[1]);
