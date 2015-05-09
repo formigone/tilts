@@ -3,7 +3,6 @@ module.exports = {
         game.load.atlasJSONHash('mm', '/img/megaman.gif', '/res/megaman.json');
     },
     get: function (game, x, y) {
-        var heroLastDir = 'right';
         var heroState = {
             standingRight: 'standingRight',
             runningRight: 'runningRight',
@@ -16,6 +15,7 @@ module.exports = {
 
         var hero = game.add.sprite(x, y, 'mm');
         hero.anchor.set(0.5, 0.5);
+        hero.heroState = heroState;
 
         hero.animations.add(heroState.standingRight, [
             'standingRight',

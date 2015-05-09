@@ -1451,7 +1451,7 @@
    <tile gid="118"/>
   </data>
  </layer>
- <objectgroup name="ObjLayer" width="36" height="20">
+ <objectgroup color="#00aa00" name="ObjLayer" width="36" height="20">
   <object type="ladder" x="400" y="112" width="16" height="64"/>
   <object type="door" x="560" y="32" width="16" height="80"/>
   <object x="480" y="112" width="96" height="208"/>
